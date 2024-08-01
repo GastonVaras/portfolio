@@ -217,9 +217,11 @@ function mostrarImagenEmergente(CreateWater) {
     spellbookPage2.appendChild(castedSpellDiv);
 }
 
-(function() {
-    emailjs.init('lYB1bO5gdu-6uhnkP'); // Reemplaza 'YOUR_PUBLIC_KEY' con tu Public Key de EmailJS
-})();
+(function(){
+    emailjs.init({
+      publicKey: "lYB1bO5gdu",
+    });
+ })();
 
 document.getElementById('contact-form').addEventListener('submit', function(event) {
     event.preventDefault(); // Evitar la recarga de la página al enviar el formulario
