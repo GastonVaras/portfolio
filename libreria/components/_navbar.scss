@@ -1,0 +1,29 @@
+// al usar % en vez de . estamos usando un placeholder, no se genera la clase por fuera del @extend
+%flex-layout {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-sizing: border-box;
+}
+
+.navbar {
+  // a diferencia de mixins a extend no se le puede pasar un argumento
+  // ademas aplica una coma a cada clase, evitando duplicar propiedades?
+  @extend %flex-layout;
+  padding: $base-padding $base-padding * 2;
+  box-shadow: $base-box-shadow;
+  .site-title {
+    font-size: $font-size-lg;
+  }
+  .container {
+    @extend %flex-layout;
+  }
+}
+
+@each $key, $val in $colors {
+  .navbar-#{$key} {
+    @extend .navbar;
+    background-color: $val;
+  }
+}

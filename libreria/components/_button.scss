@@ -1,0 +1,45 @@
+// Mixin permite crear codigo reutilizable que llamaremos luego
+// Podemos pasar un argumento ($bg-color) y un default (#e2e2e2) si el argumento no existe.
+
+@mixin btn($bg-color: #e2e2e2) {
+  text-decoration: none;
+  cursor: pointer;
+  display: inline-block;
+  border: 0;
+  padding: $base-padding $base-padding * 2;
+  border-radius: $base-border-radius;
+  background-color: $bg-color;
+}
+
+.btn {
+  // Al no definir el argumento, este mixin usa el valor default #e2e2e2
+  @include btn;
+}
+
+@each $key, $val in $colors {
+  .btn-#{$key} {
+
+    // Para usar el mixin creado previamente usamos @include, el argumento $val se usa en lugar de $bg-color
+    @include btn($val);
+    &:hover {
+      // lighten es una funcion incluida en sass "aclarar $val un 5%"
+      background-color: lighten($val, 2);
+    }
+  }
+  .btn-outlined-#{$key} {
+    @include btn(#fff);
+    border: $base-border-thickness solid $val;
+    &:hover {
+      background-color: $val;
+    }
+  }
+  .btn-complement-#{$key} {
+    @include btn($val);
+    // usamos la funcion creada en _functions para obtener el color complementario de $val
+    color: light-comp($val);
+    &:hover {
+      color: $val;
+      background-color: light-comp($val);
+    }
+  }
+}

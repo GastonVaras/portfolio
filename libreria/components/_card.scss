@@ -1,0 +1,73 @@
+// Damos aviso que vamos a usar el package math (otras opciones pueden ser floor o max)
+@use 'sass:math';
+
+.card {
+  position: relative;
+  display: grid;
+  grid-template-rows: 15rem 2rem;
+  justify-content: center;
+  border: 1px solid gray;
+  height: 17rem;
+  // Usamos math package para poder hacer divisiones: 
+  border-radius: math.div($base-border-radius, 4);
+
+  .card-title {
+    font-size: .85rem;
+    margin: 0px 20px;
+    font-weight: bold;
+    margin-top: 5px;
+  }
+
+  .card-body {
+    font-size: $base-font-size;
+    margin-top: 5px;
+
+  }
+
+  .repositorio {
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+    width: 190px;
+    height: 30px;
+    font-size: 1rem;
+    color: $primary;
+    text-align: center;
+    display: inline-flex;
+    align-items: center;
+    border-radius: .6rem;
+    padding: 0 8px;
+    transition: 1s ease-in-out;
+    border: 1px solid lightgray;
+
+    i {
+      margin-left: 15px;
+    }
+  }
+
+  .repositorio:hover {
+    border: 1px solid $primary;
+    box-shadow: 5px 5px 5px gray;
+    background-color: mix($primary, white, 50%);
+    color: white;
+
+    i {
+      transition: 1s ease;
+      transform: scale(1.4);
+    }
+  }
+
+  img {
+    border-radius: .5rem;
+    border: var(--border);
+    transition: 1s ease;
+    height: 15rem;
+    
+  }
+
+  img:hover {
+    transform: scale(1.03);
+    box-shadow: $base-box-shadow;
+    
+  }
+}

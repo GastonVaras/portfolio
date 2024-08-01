@@ -1,0 +1,61 @@
+// Por cada $key accede al $val correspondiente del mapa $colors:
+@each $key,
+$val in $colors {
+  .text-#{$key} {
+    color: $val;
+  }
+
+
+  .text-hover-#{$key} {
+
+    // En lugar de usar:   .text-hover-#{$key}:hover {}
+    // Se puede usar pseudoselectors dentro del parent usando & 
+    &:hover {
+      color: $val;
+    }
+
+    // &:nth-child, &:active, &:visited, &:last-child, etc
+  }
+
+  .bg-#{$key} {
+    background-color: $val;
+  }
+
+  // Si $val NO ES IGUAL a black o white, se corre el loop for:
+  @if ($val !=black and $val !=white) {
+
+    // light variations - Se corre loop for por cada $i (9 en total):
+    @for $i from 1 through 9 {
+      .text-#{$key}-light-#{$i} {
+        color: mix(white, $val, $i * 10%);
+      }
+
+      .text-hover-#{$key}-light-#{$i} {
+        &:hover {
+          color: mix(white, $val, $i * 10%);
+        }
+      }
+
+      .bg-#{$key}-light-#{$i} {
+        background-color: mix(white, $val, $i * 10%);
+      }
+    }
+
+    // dark variations
+    @for $i from 1 through 9 {
+      .text-#{$key}-dark-#{$i} {
+        color: mix(black, $val, $i * 10%);
+      }
+
+      .text-hover-#{$key}-dark-#{$i} {
+        &:hover {
+          color: mix(black, $val, $i * 10%);
+        }
+      }
+
+      .bg-#{$key}-dark-#{$i} {
+        background-color: mix(black, $val, $i * 10%);
+      }
+    }
+  }
+}

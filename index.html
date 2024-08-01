@@ -7,26 +7,27 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Breve descripcion de la pagina">
   <meta name="keywords" content="keyword1, keyword2, etc">
-  <link rel="stylesheet" href="./style/sass.css">
+  <link rel="stylesheet" href="./style/index.css">
   <!-- Box Icons -->
   <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 
   <title>Portfolio</title>
 </head>
 
-<body>
-
+<body class="bg-blue-light-3">
   <div class="wrapper">
-    <div class="cover cover-left"></div>
-    <div class="cover cover-right"></div>
+    <div class="cover cover-left bg-primary-dark-1"></div>
+    <div class="cover cover-right bg-primary-dark-1"></div>
+
 
     <div class="book">
+
       <!-- Profile Page -->
-      <div class="book-page page-left">
+      <div class="book-page page-left ">
         <div class="profile-page">
           <img src="images/photo.jpg" alt="mi foto">
-          <h1>Gaston Varas</h1>
-          <h3>Web Developer</h3>
+          <h1>Portfolio Gastón Varas</h1>
+          <h2>Desarrollador Web</h2>
 
           <div class="social-media">
             <a href="#"><i class='bx bxl-facebook'></i></a>
@@ -35,143 +36,78 @@
             <a href="#"><i class='bx bxl-instagram'></i></a>
           </div>
 
-          <p>Hola, soy Gaston Varas, desarrolador web. Lorem ipsum dolor sit amet consectetur adipisicing elit.
-            Reiciendis atque asperiores ea cupiditate sapiente consequatur ipsum corrupti dolorum, magni perferendis
-            quas inventore ratione libero reprehenderit aliquid est animi. Autem, minima.</p>
+          <p class="mb-2">¡Bienvenido a mi portfolio! Te invito a recorrerlo.
+            Espero haber plasmado mis conocimientos de la mejor manera, si te interesa lo que hago ¡No dudes en
+            escribirme!</p>
 
           <div class="btn-box">
             <a href="#" class="btn">Descargar CV</a>
-            <a href="#" class="btn contact-me">Contactarme</a>
+            <a href="#" class="btn contact-me" onclick="contactMe()">Contactarme</a>
           </div>
         </div>
       </div>
 
       <!-- Page 1 & 2 -->
       <div class="book-page page-right turn" id="turn-1">
-        <!-- Page 1 - work experience -->
+        <!-- Page 1 -->
         <div class="page-front">
-          <h1 class="title"> Work Experience</h1>
+          <section id="indice-proyectos">
+            <h2 class="title text-primary-dark-7 bg-yellow-light-3">Indice</h2>
 
-          <div class="workeduc-box">
-            <div class="workeduc-content">
-              <span class="year"><i class='bx bxs-calendar'></i>2020 - 2021</span>
-              <h3>Web Developer - Company</h3>
-              <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Labore debitis et, corrupti facilis
-                accusantium, ea pariatur quas voluptatibus dolores culpa nihil voluptatum earum unde perferendis.</p>
-            </div>
+            <ul class="text-primary-dark-5">
+              <li class="nav-item" data-target-page="2">
+                <p>Mis Conocimientos<span>2</span></p>
+                <p>Resumen academico, recursos y capacitaciones</p>
+              </li>
+              <li class="nav-item" data-target-page="3">
+                <p>Mis Servicios<span>3</span></p>
+                <p>4 pilares en la creacion de cualquier proyecto</p>
+              </li>
+              <li class="nav-item" data-target-page="4">
+                <p>Piedra, Papel o Tijera<span>4</span></p>
+                <p>Minijuego creado con HTML, CSS y javascript</p>
+              </li>
+              <li class="nav-item" data-target-page="5">
+                <p>Ajedrez Animado<span>5</span></p>
+                <p>Uso avanzado de javascript y diseño de piezas y animaciones</p>
+              </li>
+              <li class="nav-item" data-target-page="6">
+                <p>Juego de Memoria Embedded<span>6</span></p>
+                <p>Juega sin abandonar la pagina por medio del elemento &#60;iframe&#62;</p>
+              </li>
+              <li class="nav-item" data-target-page="7">
+                <p>Piano Embedded<span>7</span></p>
+                <p>Otro ejemplo de la utilizacion de elemento &#60;iframe&#62;</p>
+              </li>
+              <li class="nav-item" data-target-page="8">
+                <p>Sitio Web Adaptativo<span>8</span></p>
+                <p>Servicio completo de web con asesoramiento personalizado</p>
+              </li>
+              <li class="nav-item" data-target-page="9">
+                <p>Libreria SASS - Landing<span>9</span></p>
+                <p>Herramienta que nos permite estilizar velozmente</p>
+              </li>
+              <li class="nav-item" data-target-page="10">
+                <p>Spellbook<span>10</span></p>
+                <p>Proyecto personal usando el conocimiento adquirido</p>
+              </li>
 
-            <div class="workeduc-content">
-              <span class="year"><i class='bx bxs-calendar'></i>2021 - 2022</span>
-              <h3>Web Developer - Company</h3>
-              <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Labore debitis et, corrupti facilis
-                accusantium, ea pariatur quas voluptatibus dolores culpa nihil voluptatum earum unde perferendis.</p>
-            </div>
-
-            <div class="workeduc-content">
-              <span class="year"><i class='bx bxs-calendar'></i>2022 - 2023</span>
-              <h3>Web Developer - Company</h3>
-              <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Labore debitis et, corrupti facilis
-                accusantium, ea pariatur quas voluptatibus dolores culpa nihil voluptatum earum unde perferendis.</p>
-            </div>
-          </div>
-
-          <span class="number-page">1</span>
-
+              <li class="nav-item" data-target-page="12">
+                <p>Contactame<span>12</span></p>
+                <p>Deja tus datos de contacto, me encantaria saber de ti!</p>
+              </li>
+            </ul>
+          </section>
+          <span class="number-page" id="n-p-3">1</span>
           <!-- Next Button -->
           <span class="nextprev-btn" data-page="turn-1">
             <i class='bx bx-chevron-right'></i>
           </span>
         </div>
 
-
-
-        <!-- Page 2 - education -->
+        <!-- Page 2 -->
         <div class="page-back">
-          <h1 class="title">Education</h1>
-
-          <div class="workeduc-box">
-            <div class="workeduc-content">
-              <span class="year"><i class='bx bxs-calendar'></i>2020 - 2021</span>
-              <h3>Master Degree - University</h3>
-              <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Labore debitis et, corrupti facilis
-                accusantium, ea pariatur quas voluptatibus dolores culpa nihil voluptatum earum unde perferendis.</p>
-            </div>
-
-            <div class="workeduc-content">
-              <span class="year"><i class='bx bxs-calendar'></i>2021 - 2022</span>
-              <h3>Master Degree - University</h3>
-              <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Labore debitis et, corrupti facilis
-                accusantium, ea pariatur quas voluptatibus dolores culpa nihil voluptatum earum unde perferendis.</p>
-            </div>
-
-            <div class="workeduc-content">
-              <span class="year"><i class='bx bxs-calendar'></i>2022 - 2023</span>
-              <h3>Master Degree - University</h3>
-              <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Labore debitis et, corrupti facilis
-                accusantium, ea pariatur quas voluptatibus dolores culpa nihil voluptatum earum unde perferendis.</p>
-            </div>
-          </div>
-
-          <span class="number-page">2</span>
-
-          <!-- Prev Button -->
-          <span class="nextprev-btn back" data-page="turn-1">
-            <i class='bx bx-chevron-left'></i>
-          </span>
-
-        </div>
-
-      </div>
-
-      <!-- Page 3 & 4 -->
-      <div class="book-page page-right turn" id="turn-2">
-        <!-- page 3 (My Services) -->
-
-        <div class="page-front">
-          <h1 class="title">My Services</h1>
-
-          <div class="services-box">
-            <div class="services-content">
-              <i class='bx bx-code-alt'></i>
-              <h3>Desarrollador Web</h3>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-              <a href="#" class="btn">Read More</a>
-            </div>
-
-            <div class="services-content">
-              <i class='bx bxs-paint'></i>
-              <h3>Creative Design</h3>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-              <a href="#" class="btn">Read More</a>
-            </div>
-
-            <div class="services-content">
-              <i class='bx bx-bar-chart-alt'></i>
-              <h3>Digital Marketing</h3>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-              <a href="#" class="btn">Read More</a>
-            </div>
-
-            <div class="services-content">
-              <i class='bx bx-search'></i>
-              <h3>SEO</h3>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-              <a href="#" class="btn">Read More</a>
-            </div>
-          </div>
-
-          <span class="number-page">3</span>
-
-          <!-- Next Button -->
-          <span class="nextprev-btn" data-page="turn-2">
-            <i class='bx bx-chevron-right'></i>
-          </span>
-
-        </div>
-
-        <!-- page 4 (My Skills) -->
-        <div class="page-back">
-          <h1 class="title">My Skills</h1>
+          <h2 class="title text-primary-dark-7 bg-green-light-5">Mis conocimientos</h2>
 
           <div class="skills-box">
             <div class="skills-content">
@@ -201,87 +137,375 @@
               <h3>IU/UX Design</h3>
               <div class="content">
                 <span><i class='bx bxl-figma'></i>Figma</span>
+                <span><img src="./images/canva-icon.ico" alt="">Canvas</span>
               </div>
             </div>
-
           </div>
-          <span class="number-page">4</span>
+          <span class="number-page" id="n-p-2">2</span>
+          <!-- Prev Button -->
+          <span class="nextprev-btn back" data-page="turn-1">
+            <i class='bx bx-chevron-left'></i>
+          </span>
+          <a href="#" class="back-profile" onclick="volverInicio()">
+            <p>Indice</p>
+            <i class='bx bxs-user'></i>
+          </a>
+        </div>
+      </div>
 
+      <!-- Page 3 & 4 OK!! -->
+      <div class="book-page page-right turn" id="turn-2">
+        <!-- page 3 - Mis Servicios -->
+
+        <div class="page-front">
+          <h2 class="title text-primary-dark-7 bg-green-light-5">Mis Servicios</h2>
+
+          <div class="services-box">
+            <div class="services-content">
+              <i class='bx bx-code-alt'></i>
+              <h3>Desarrollador Web</h3>
+              <p class="font-sm">Usar correctamente los elementos HTML y entender su valor semantico facilita su
+                lectura, tanto para usuarios como navegadores.</p>
+            </div>
+
+            <div class="services-content">
+              <i class='bx bxs-paint'></i>
+              <h3>Diseño Creativo</h3>
+              <p class="font-sm">El diseño es un punto fundamental en la experiencia de usuario. Me gusta pensar
+                propuestas interesantes y diferentes. ¡Da vuelta la pagina para conocer
+                diferentes presentaciones!</p>
+
+            </div>
+
+            <div class="services-content">
+              <i class='bx bx-bar-chart-alt'></i>
+              <h3>Marketing Digital</h3>
+              <p class="font-sm">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repellat ut harum at,
+                molestiae accusantium aperiam iste sequi vero mollitia dicta, amet quis adipisci et obcaecati!</p>
+
+            </div>
+
+            <div class="services-content">
+              <i class='bx bx-search'></i>
+              <h3>SEO</h3>
+              <p class="font-sm">SEO, es la abreviatura en inglés de "optimización en buscadores", consiste en
+                ayudar a los buscadores a entender tu contenido y a los usuarios a encontrar tu sitio.</p>
+
+            </div>
+          </div>
+          <span class="number-page" id="n-p-1">3</span>
+          <!-- Next Button -->
+          <span class="nextprev-btn" data-page="turn-2">
+            <i class='bx bx-chevron-right'></i>
+          </span>
+        </div>
+
+        <!-- page 4 - Piedra Papel o Tijera OK!! -->
+        <div class="page-back">
+          <section id="piedra-papel-tijera">
+            <h2 class="title text-primary-dark-7 bg-primary-light-5">Piedra, Papel o Tijera</h2>
+            <div class="card bg-gray-light-8 p-1 pb-0">
+              <div class="card-body">
+                <a href="https://gastonvaras.github.io/piedra-papel-tijera/" target="_blank">
+                  <img src="./images/piedra-papel-tijera.png" alt="Screenshot de juego Piedra, Papel o Tijera">
+                </a>
+              </div>
+              <div class="btn-box">
+                <p class="mt-1">¡Uno de mis primeros proyectos combinando HTML, CSS, SASS y Javascript!</p>
+                <a href="https://gastonvaras.github.io/piedra-papel-tijera/" target="_blank"
+                  class="jugar-btn bg-primary">¡Jugar!</a>
+                <a href="https://github.com/GastonVaras/piedra-papel-tijera" target="_blank" class="repositorio">Link a
+                  repositorio<i class='bx bx-link-external'></i></a>
+              </div>
+            </div>
+            <div class="text-box mt-1">
+              <p>Elije tu opción y compite contra la máquina. Verás una simple animación según el resultado.</p>
+              <p>Las animacion de derrota combina la propiedad "transform: rotate()", variando de -45deg a 45deg con un
+                uso intermitente de box-shadow color rojo.</p>
+              <p>Las animacion de victoria en cambio, combina la propiedad "transform: scale()" con un box-shadow color
+                verde permanente.</p>
+              <p>El resultado se determina utilizando javascript.</p>
+            </div>
+          </section>
+          <span class="number-page" id="n-p-4">4</span>
           <!-- Prev Button -->
           <span class="nextprev-btn back" data-page="turn-2">
             <i class='bx bx-chevron-left'></i>
           </span>
+          <a href="#" class="back-profile" onclick="volverInicio()">
+            <p>Indice</p>
+            <i class='bx bxs-user'></i>
+          </a>
         </div>
-
       </div>
-
 
       <!-- Page 5 & 6 -->
       <div class="book-page page-right turn" id="turn-3">
-        <!-- page 5 (Ajedrez Animado) -->
+        <!-- page 5 - Ajedrez Animado OK!! -->
         <div class="page-front">
-          <h1 class="title">Ajedrez Animado</h1>
+          <section id="ajedrez-animado-page">
+            <h2 class="title text-primary-dark-7 bg-primary-light-5">Ajedrez Animado</h2>
 
-          <div class="portfolio-box">
-            <div class="img-box">
-              <img src="./images/ajedrez-animado.png" alt="Preview de Ajedrez Animado">
-            </div>
-
-            <div class="info-box">
-              <div class="info-title">
-                <h3>Link a "page" de github: </h3>
-                <a href="https://gastonvaras.github.io/AjedrezAnimado/" target="_blank">Jugar ahora!<i class='bx bx-link-external'></i></a>
+            <div class="card">
+              <div class="card-body">
+                <a href="https://gastonvaras.github.io/AjedrezAnimado/" target="_blank">
+                  <img src="./images/ajedrez-animado.png" alt="Preview de Ajedrez Animado">
+                </a>
               </div>
-              <p>Observaciones:</p>
-              <p>Cada pieza tomada muestra una animacion. El movimiento de las piezas no esta restringido (de momento).</p>
-              <p>Cuando pongamos al rey contrario en Jaque, declararlo usando el boton de "Jaque"</p>
-              <p>Si el rey en jaque no tiene movimiento posible, podemos terminar la partida usando el boton "Mate".</p>
+              <div class="card-title">Al capturar una pieza veras una animación! Haz click en la imagen para jugar.
+              </div>
+              <a href="https://github.com/GastonVaras/AjedrezAnimado" target="_blank" class="repositorio">Link a
+                repositorio<i class='bx bx-link-external'></i></a>
             </div>
-            <div class="btn-box">
-              <a href="https://github.com/GastonVaras/AjedrezAnimado" target="_blank" class="btn">Ver repositorio</a>
-              <!-- <a href="#" class="btn">More Pro jects</a> -->
+            <div class="text-box mt-1">
+              <p>Usa los botones para declarar jaque y ¡mate! El rey perdedor será decapitado.
+              </p>
+              <p>A la iaquierda vemos el registro de movimientos y la derecha se guardan las piezas capturadas.</p>
+              <p>Las animaciones pueden demorar un poco en cargar, refresca la pagina si esto sucede. El movimiento de
+                piezas no esta restringido.</p>
+              <p>Tambien puedes promover peones, guardar y cargar tu partida</p>
             </div>
+          </section>
 
-          </div>
-          <span class="number-page">5</span>
-
+          <span class="number-page" id="n-p-5">5</span>
           <!-- Next Button -->
           <span class="nextprev-btn" data-page="turn-3">
             <i class='bx bx-chevron-right'></i>
           </span>
         </div>
 
-        <!-- page 6 (Contact Me) -->
+        <!-- page 6 - Juego de Memoria OK!! -->
         <div class="page-back">
-          <h1 class="title">Contact Me!</h1>
+          <section id="juego-memoria-page">
+            <h2 class="title text-primary-dark-7 bg-orange-light-5">Juego de Memoria</h2>
 
-          <div class="contact-box">
-            <form action="#">
-              <input type="text" class="field" placeholder="Full Name" required>
-              <input type="email" class="field" placeholder="Email Address" required>
-              <textarea name="" id="" cols="30" rows="10" class="field" placeholder="Your Message" required></textarea>
-              <input type="submit" class="btn" value="Send Message">
-            </form>
-          </div>
-          <span class="number-page">6</span>
+            <div class="card">
+              <div class="card-body">
+                <iframe src="https://gastonvaras.github.io/juego-memoria/" title="juego-de-memoria"></iframe>
+              </div>
+              <a href="https://github.com/GastonVaras/juego-memoria" target="_blank" class="repositorio">Link a
+                repositorio<i class='bx bx-link-external'></i></a>
+            </div>
+            <div class="text-box mt-1">
+              <p>En este juego das vuelta dos cartas por vez e intentas encontrar el par
+                correspondiente.
+              </p>
+              <p>Los elementos HTML se generan de manera dinamica por medio de la funcion createBoard(). La mecanica
+                utiliza un array para las imagenes y la funcion checkMatch() junto con statements if/else y el method
+                for para determinar el resultado.</p>
+              <p class="mt-1 row justify-center">Haz click en las cartas para jugar!</p>
+            </div>
+          </section>
 
+          <span class="number-page" id="n-p-6">6</span>
           <!-- Prev Button -->
           <span class="nextprev-btn back" data-page="turn-3">
             <i class='bx bx-chevron-left'></i>
           </span>
-
-          <a href="#" class="back-profile">
-            <p>Profile</p>
-            <i class='bx bxs-user' ></i>
+          <a href="#" class="back-profile" onclick="volverInicio()">
+            <p>Indice</p>
+            <i class='bx bxs-user'></i>
           </a>
         </div>
-
       </div>
+
+      <!-- Page 7 & 8 -->
+      <div class="book-page page-right turn" id="turn-4">
+        <!-- page 7 - Piano Embedded -->
+        <div class="page-front">
+          <section id="piano-embedded">
+            <h2 class="title text-primary-dark-7 bg-orange-light-5">Piano Musical</h2>
+
+            <div class="card">
+              <div class="card-body">
+                <iframe src="https://gastonvaras.github.io/piano/" title="Piano"></iframe>
+              </div>
+              <a href="https://github.com/GastonVaras/piano" target="_blank" class="repositorio">Link a
+                repositorio<i class='bx bx-link-external'></i></a>
+            </div>
+            <div class="text-box mt-1">
+              <p class="mt-2">Toca las teclas para crear tu melodia!</p>
+              <p class="mt-2">Si quieres probar el piano en una ventana aparte y a pantalla completa haz click:<a
+                  href="https://gastonvaras.github.io/piano/" target="_blank"
+                  class="jugar-btn display-b bg-primary-light-5">¡Click!</a>.</p>
+            </div>
+          </section>
+
+          <span class="number-page" id="n-p-7">7</span>
+          <!-- Next Button -->
+          <span class="nextprev-btn" data-page="turn-4">
+            <i class='bx bx-chevron-right'></i>
+          </span>
+        </div>
+
+        <!-- page 8 - Full Responsive Web -->
+        <div class="page-back">
+          <section id="full-responsive-web">
+            <h2 class="title text-primary-dark-7 bg-purple-light-6">Responsive Web</h2>
+
+            <div class="text-box mt-1">
+              <p>Este proyecto es un mock up de un ecommerce.</p>
+              <p>El sitio cuenta con una pagina de inicio y 6 paginas complementarias para navegar y conocer las
+                posibilidades que ofrece el desarrollo web.
+              </p>
+              <p>Tener en cuenta que algunos elementos son a modo de demostracion, por ejemplo el carro de compras no es
+                funcional o algunos botones o links de contacto son falsos.</p>
+              <p>Todas las paginas se adaptan a distintas resoluciones gracias al uso de mediaquery.</p>
+            </div>
+            <div class="card mt-1">
+              <div class="card-body"><a href="https://gastonvaras.github.io/responsive-ecommerce/" target="_blank">
+                  <img src="./images/ecommerce.png" alt="Captura de pantalla de landpage de Ecommerce"></a>
+              </div>
+              <a href="https://github.com/GastonVaras/responsive-ecommerce" target="_blank" class="repositorio">Link a
+                repositorio<i class='bx bx-link-external'></i></a>
+            </div>
+          </section>
+          <span class="number-page" id="n-p-8">8</span>
+          <!-- Prev Button -->
+          <span class="nextprev-btn back" data-page="turn-4">
+            <i class='bx bx-chevron-left'></i>
+          </span>
+          <a href="#" class="back-profile" onclick="volverInicio()">
+            <p>Indice</p>
+            <i class='bx bxs-user'></i>
+          </a>
+        </div>
+      </div>
+
+
+
+
+      <!-- Page 9 & 10 -->
+      <div class="book-page page-right turn" id="turn-5">
+        <!-- page 9 -->
+        <div class="page-front">
+          <section id="libreria-sass">
+            <h2 class="title text-primary-dark-7 bg-purple-light-6">Libreria SASS</h2>
+            <div class="card bg-gray-light-8">
+              <div class="card-body">
+                <a href="https://gastonvaras.github.io/libreria-sass/" target="_blank"><img
+                    src="./images/landpage-libreria.png"
+                    alt="Captura de pantalla de landpage hecha con libreria SASS"></a>
+              </div>
+              <a href="https://github.com/GastonVaras/libreria-sass" target="_blank" class="repositorio">Link a
+                repositorio<i class='bx bx-link-external'></i></a>
+            </div>
+
+            <div class="text-box mt-1">
+              <p>Haz click en la imagen para navegar la pagina, en su contenido explico en mayor detalle como sacar
+                provecho a esta forma de estilizar una web.</p>
+              <p>La primer ventaja de una libreria es tener una gran variedad de clases con poco codigo utilizando
+                variables, mapas y algo de programación.</p>
+              <p>La segunda ventaja es que podemos dar estilo solo asignando nuestras clases pre-generadas a cada
+                elemento, sin necesidad de escribir codigo!.</p>
+            </div>
+          </section>
+          <span class="number-page" id="n-p-9">9</span>
+          <!-- Next Button -->
+          <span class="nextprev-btn" data-page="turn-5">
+            <i class='bx bx-chevron-right'></i>
+          </span>
+        </div>
+
+        <!-- page 10 - Spellbook -->
+        <div class="page-back">
+
+          <section id="spellbook-page">
+            <h2 class="title text-primary-dark-7 bg-primary-light-5">Libro de Hechizos</h2>
+            <div class="card bg-gray-light-8 p-1 pb-0">
+              <div class="card-body">
+                <a href="https://gastonvaras.github.io/spellbook/" target="_blank">
+                  <img src="./images/spellbook.png" alt="Screenshot de Organizador de Hechizos">
+                </a>
+                <div class="btn-box">
+                  <p class="main-p mt-1">Este proyecto lo hice para organizar mis hechizos de D&D en el celular. Podes
+                    filtrar por
+                    "favoritos", "preparados" o volver a ver "todos".</p>
+                  <p class="mt-1 mb-1">Tiene un buscador de hechizos predictivo y podes ampliar los hechizos con este
+                    icono: </p><img src="./images/spellbook-expandir-icono.png" alt="" class="icon-spell">
+                  <p class="mt-2">Esto permite leer la descripcion completa del hechizo.</p>
+                  <p class="text-primary left-pointer mb-1"><span>
+                      <</span>------ </p> <p class="mt-2">Icono de hechizo preparado: </p><img
+                    src="./images/spellbook-preparar-icono.png" alt="" class="icon-spell">
+                  <p>Icono de hechizo favorito: </p><img src="./images/spellbook-favorito-icono.png" alt=""
+                    class="icon-spell">
+                </div>
+              </div>
+              <a href="https://github.com/GastonVaras/spellbook" target="_blank" class="repositorio">Link a
+                repositorio<i class='bx bx-link-external'></i></a>
+            </div>
+          </section>
+
+          <span class="number-page" id="n-p-10">10</span>
+          <!-- Prev Button -->
+          <span class="nextprev-btn back" data-page="turn-5">
+            <i class='bx bx-chevron-left'></i>
+          </span>
+          <a href="#" class="back-profile" onclick="volverInicio()">
+            <p>Indice</p>
+            <i class='bx bxs-user'></i>
+          </a>
+        </div>
+      </div>
+
+      <!-- Page 11 & 12 -->
+      <div class="book-page page-right turn" id="turn-6">
+        <!-- page 11 -->
+        <div class="page-front">
+          <section id="spellbook-page-2">
+            <h2 class="title text-primary-dark-7 bg-primary-light-5">Libro de Hechizos</h2>
+            <div class="card bg-gray-light-8 p-1 pb-0">
+              <div class="card-body">
+                <a href="https://gastonvaras.github.io/spellbook/" target="_blank">
+                  <img src="./images/spellbook2.png" alt="Screenshot de Organizador de Hechizos">
+                </a>
+                <div class="btn-box">
+                  <p class="mt-1 mb-1">Si clickeamos "Favoritos" solo veremos los hechizos que hayamos marcado
+                    previamente. Idem "Preparados", al clickear "Todos" veremos la totalidad de hechizos.
+                  </p>
+                  <p class="mt-2 mb-2">Con el hechizo expandido aparece un nuevo boton, el de lanzar hechizo. Proba
+                    haciendo
+                    click para lanzar el hechizo "Create Water".</p>
+
+                  <button class="cast-spells mt-2"><img src="../images/cast-spells-icon.png" alt="Mano con hechizo"
+                      onclick="castearHechizo()"></button>
+                  <p class="mt-2 mago-natural">Excelente, la magia te sale natural!</p>
+                </div>
+              </div>
+            </div>
+          </section> <span class="number-page" id="n-p-11">11</span>
+          <!-- Next Button -->
+          <span class="nextprev-btn" data-page="turn-6">
+            <i class='bx bx-chevron-right'></i>
+          </span>
+        </div>
+
+ <!-- page 12 (Contact Me) -->
+<div class="page-back">
+  <section id="contact-me-page">
+    <h2 class="title">Contactame!</h2>
+    <div class="contact-box">
+      <form id="contact-form">
+        <input type="text" class="field" placeholder="Nombre Completo" name="nombre" required>
+        <input type="email" class="field" placeholder="Direccion de Email" name="email" required>
+        <textarea name="mensaje" cols="30" rows="10" class="field" placeholder="Dejame tu mensaje" required></textarea>
+        <input type="submit" class="btn-outlined-primary" value="Enviar!">
+      </form>
     </div>
+  </section>
+  <span class="number-page" id="n-p-12">12</span>
+  <span class="nextprev-btn back" data-page="turn-6">
+    <i class='bx bx-chevron-left'></i>
+  </span>
+  <a href="#" class="back-profile" onclick="volverInicio()">
+    <p>Indice</p>
+    <i class='bx bxs-user'></i>
+  </a>
+</div>
 
-  </div>
+<script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+<script src="./javascript/index.js"></script>
 
-  <script src="./javascript/index.js"></script>
 </body>
 
 </html>
