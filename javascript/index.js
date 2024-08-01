@@ -218,7 +218,7 @@ function mostrarImagenEmergente(CreateWater) {
 }
 
 (function() {
-    emailjs.init('YOUR_PUBLIC_KEY'); // Reemplaza 'YOUR_PUBLIC_KEY' con tu Public Key de EmailJS
+    emailjs.init('lYB1bO5gdu-6uhnkP'); // Reemplaza 'YOUR_PUBLIC_KEY' con tu Public Key de EmailJS
 })();
 
 document.getElementById('contact-form').addEventListener('submit', function(event) {
@@ -232,7 +232,7 @@ document.getElementById('contact-form').addEventListener('submit', function(even
     };
 
     // Enviar el correo usando EmailJS
-    emailjs.send('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', formData)
+    emailjs.send('service_f1228lj', 'template_t13ytq7', formData)
         .then(function(response) {
             console.log('SUCCESS!', response.status, response.text);
             alert('Mensaje enviado exitosamente!');
