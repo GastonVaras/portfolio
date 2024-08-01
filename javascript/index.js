@@ -110,21 +110,10 @@ navItems.forEach((item) => {
             setTimeout(() => {
                 pages[0].style.zIndex = 20;
                 pages[1].style.zIndex = 22;
-                pages[1].style.zIndex = 24;
-            }, 500);
-            
-        } else if (pageIndex === 6 || pageIndex === 7) {
-            console.log('pagina seis o siete locardo!');
-            pages[0].classList.add('turn');
-            pages[1].classList.add('turn');
-            pages[2].classList.add('turn');
-            setTimeout(() => {
-                pages[0].style.zIndex = 20;
-                pages[1].style.zIndex = 22;
                 pages[2].style.zIndex = 24;
             }, 500);
-        }
-
+            
+        } 
         else if (pageIndex === 8 || pageIndex === 9) {
             console.log('pagina ocho o nueve locardo!');
             pages[0].classList.add('turn');
